@@ -1,0 +1,19 @@
+Manual Install
+
+오라클 사이트에서 .tar.gz 파일을 다운로드
+
+tar zxvf jdk-~~~~~  /압축해제
+sudo mkdir /usr/lib/jvm /jvm     폴더 생성
+sudo mv jdk~~~~ /usr/lib/jvm    /폴더 이동
+
+명령어 등록
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk~~~/bin/java 1
+sudo update-alternatives --install /usr/bin/java javac /usr/lib/jvm/jdk~~~/bin/javac 1
+sudo update-alternatives --install /usr/bin/java javaws /usr/lib/jvm/jdk~~~/bin/javaws 1
+
+Jdk 버전 선택
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo update-alternatives --config javaws
+
+
