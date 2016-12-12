@@ -1,0 +1,14 @@
+git ssh 설정법
+ssh-keygen -t rsa -C "blabla@blabla.bla"
+
+-t 는 키의 타입이 rsa 인지 dsa 인지 정함, -C 는 코맨트입력
+
+키 이름과, 비밀번호를 입력하는데 비밀번호를 입력하지 않으면 접속시 비밀번호 요구하지 않음
+
+~/.ssh 폴더에 저장
+
+/.ssh 폴더에 ls -l 하면 my_ssh_key my_ssh_key.pub 생성
+
+cat my_ssh_key.pub 하면 key 내용이 보임
+
+이 키를 git 사이트 세팅에서 ssh 키부분에 복사해서 붙이면 끝
