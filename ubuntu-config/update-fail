@@ -1,0 +1,25 @@
+apt-get update 시
+Some index files failed to download, they have been ignored, or old ones used instead.
+
+명령어시
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get autoremove
+
+등이 있음
+
+
+서버 도메인 주소를 변경 하는 방법이 있음
+sudo vim /etc/resolv.conf
+내에
+nameserver 168.126.63.1
+로 변경, 주소는 여러개가 있는데 검색해서 찾을것
+
+sudo service resolvconf restart
+재시작
+
+계속 에러시
+Software Sources > Other Software 에 가서
+에러난 ppa 를 모두 제거 한다
+(해결봄)
