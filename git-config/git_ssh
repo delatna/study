@@ -12,3 +12,43 @@ ssh-keygen -t rsa -C "blabla@blabla.bla"
 cat my_ssh_key.pub 하면 key 내용이 보임
 
 이 키를 git 사이트 세팅에서 ssh 키부분에 복사해서 붙이면 끝
+
+
+
+
+
+1.2 SSH login 설정하기
+
+1.2.1 ssh 인증에 필요한 public key와 private key를 생성한다.
+
+$ cd ~/.ssh
+$ ssh-keygen -t rsa -C test@example.com // 자기 메일 주소
+$ chmod 600 id_rsa  // key의 permision을 강화한다.
+1.2.2 SSH키의 설정
+
+vim ~/.ssh/config
+
+아래를 추가한다. 
+
+Host github
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  User git
+1.2.3 Github Server에 key 등록하기
+
+key를 복사한다.
+
+$ pbcopy < ~/.ssh/id_rsa.pub
+직접 복사하기
+Terminal에서 전송하기
+확인
+ssh -T git@github.com
+
+1.2.4 Local Repository의 설정을 변경한다.
+
+mysite/.git/config
+×(NG) url = https://github.com/{account name}/{repository name}.git
+◯(OK) url = git@github.com:{account name}/{repository name}.git
+1.2.5 이미 remote repository가 설정 되어 있을 경우
+
+git remote set-url origin git@github.com:[user ID]/[repository].git 로 재설정 해준다.
