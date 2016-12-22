@@ -22,3 +22,8 @@ def family_info(name, *family_name, **info):
 my_fam = ("아버지", "엄마", "형", "동생")
 my_dict = {"가훈":"잘먹고 잘살자", "지역":"부산"}
 family_info("홍길동", "아버지", "엄마", "아들", 가훈="우리집 가훈", 집="부산")
+
+def my_string(*args, seperator = "/"):
+    return seperator, join(args)
+
+my_string("빨","주","노","초","파","남","보")
