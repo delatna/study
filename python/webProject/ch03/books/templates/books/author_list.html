@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>책 저자 보기</title>
+</head>
+<body>
+author_list.html<br>
+<h1>Author List</h1>
+<ul>
+{% for author in object_list %}
+	<li>{{ author.name }} </li>
+{% endfor %}
+</ul>
+</body>
+</html>
+

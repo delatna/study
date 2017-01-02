@@ -1,0 +1,7 @@
+vi
+redo u 반대
+shift + j 당기기
+치환
+:1,$s/KOREA/#/g -> 처음부터 끝까지 KOREA를 #으로 바꿔라 g는 글로벌
+
+

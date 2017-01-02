@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>책 목록 보기</title>
+
+</head>
+<body>
+	book_list.html<br>
+	<h1>Book List</h1>
+	<ul>
+	{% for book in object_list %}
+		<li>{{ book.title }} </li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

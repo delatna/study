@@ -1,0 +1,9 @@
+SOCK_DGRAM	// UDP
+SOCK_STREAM	// TCP
+
+TCP 는 자기컴퓨터로 접속하므로 아이피를 적을필요 없음
+
+iff5a == integer, float, float, 5개의 글자
+
+b == byte
+

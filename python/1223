@@ -1,0 +1,20 @@
+pycharm 디버깅 모드 진행 F8
+
+break 를 걸때는 라인숫자 옆을 클릭해서 빨간색 원을 만든다
+
+실행은 bug 아이콘으로 실행(오른쪽 위에 있음)
+
+w 처음부터 쓴다
+a 붙여쓴다
+wt 다시 새로 씀
+
+
+
+file_list = f.readlines()
+//알아서 파일을 닫아줌 close 안해도 됨
+
+JSON - JavaScript Object Notation
+
+TLV (Type Length Value) 형식
+
+

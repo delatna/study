@@ -1,0 +1,56 @@
+HTTP 메시지 구조
+	Start Line, Header, Blank line, Body
+
+Http 처리 방식
+	메소드 : GET, POST, PUT, DELETE
+Status Code
+	1xx ~ 6xx
+
+URL 용어 (Uniform ??)
+http://www.google.com:80/table/hi?category=1&kine=test#a10
+URL Scheme : http
+Host Name : www.google.com
+Port : 80
+Path : table/hi(파일까지 포함)
+QueryString : ?category=1&kine=test
+File : #a10
+
+Python 의 우아한 URL
+
+파이썬은 간편 URL 체제 도입
+정규식
+
+url(r^
+
+MVC 패턴 기반 MTV
+Model - View - Controller	기반 프레임워크
+장고 : View - > Template, Controller-> View 로 호칭	//Template == 틀
+	Model - Template - View 프레임 워크
+객체 관계 매핑(ORM, Object-Relational Mapping)
+우아한 URL 설계 - Regular Expression
+자체 템플릿 시스템
+캐시 시스템
+다국어 지원
+풍부한 개발환경
+소스 변경사항 자동 반영
+
+
+new Project 만든 다음 터미널 창에서 django-admin startproject 프로젝트명
+명령 결과는 mysite 에서 폴더 생성
+mysite/mysite 중 첫 번째 폴더의 이름을 바꿈
+
+ch03/mysite
+
+앱 스타트
+cd ch03
+python manage.py startapp polls
+
+정상적으로 수행되면 왼쪽 소스트리에 polls 폴더가 만들어짐
+python manage.py migrate		//데이터베이스 변경점 있으면 고침
+python manage.py runserver		//
+
+super user 설정
+python manage.py createsuperuser
+
+mysite/settings.py		//세팅파일
+

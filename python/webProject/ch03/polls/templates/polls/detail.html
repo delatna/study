@@ -1,0 +1,15 @@
+<!-- file name : ch03/polls/templates/polls/detail.html -->
+<h1>{{ question.question_text}}</h1>
+{% if error_message %}
+    <p>Error : {{error_message}}</p>
+{% endif %}
+                                <!--polls.vote-->
+<form method="post" action="{% url 'polls:vote' question.id %}">
+    {% csrf_token %}    <!-- CSRF : Cross Site Request Forgery Attack -->
+    {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" value="{{choice.id}}" id="choice{{forloop.counter}}">
+        <label for="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
+    {% endfor %}
+
+    <input type="submit" value="투표실행">
+</form>

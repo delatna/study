@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>도서 관리 프로그램</title>
+</head>
+
+<body>
+	<h1>Books Management System</h1>
+
+	<ul>
+		{% for modelname in object_list %}
+			{% with "books:"|add:modelname|lower|add:"_list" as urlvar %}
+				<li><a href="{% url urlvar %}"> {{ modelname }}</a> </li>
+			{% endwith %}
+		{% endfor %}
+
+	</ul>
+</body>
+</html>

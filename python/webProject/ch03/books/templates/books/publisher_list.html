@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>출판사 목록 보기</title>
+</head>
+<body>
+	publisher_list.html <br>
+	<h1>Publisher List</h1>
+	<ul>
+	{% for publisher in object_list %}
+		<li>{{ publisher.name }} </li>
+	{% endfor %}
+</ul>
+</body>
+</html>
