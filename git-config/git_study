@@ -3,4 +3,8 @@ insertions // 추가됨?
 git log		//커밋 로그 해쉬함수 확인가능
 git add *	//새로운 파일이 생기면 스테이징을 해줘야함
 git commit -a	//새로운 파일이 없다면 현재 파일이 바꼈을때 커밋 가능
+git log --pretty --graph	//
 
+HEAD 		//현재 작업하고 있는 브렌치
+git branch ~~~	//브렌치 생성
+git checkout ~~~		//브렌치 변경
