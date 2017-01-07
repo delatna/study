@@ -1,4 +1,6 @@
 git init	//저장소 생성
 insertions // 추가됨?
 git log		//커밋 로그 해쉬함수 확인가능
+git add *	//새로운 파일이 생기면 스테이징을 해줘야함
+git commit -a	//새로운 파일이 없다면 현재 파일이 바꼈을때 커밋 가능
 
