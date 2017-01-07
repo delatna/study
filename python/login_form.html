@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>로그인 절차</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+	function checkError()
+	{
+		var f = document.loginForm;
+		
+		if(f.id.value == '')
+		{
+			alert('아이디를 입력하세요');
+			return false;
+		}else
+		{
+				
+		}
+
+		re = /^01[016789]-\d{4}-\d{4}$/;
+		if(!re.test(f.mobile.value))
+		{
+			alert('휴대전화는 010-1234-5678 형식입니다.');
+			f.mobile.focus();
+			
+		}
+
+
+		var obj = document.getElementById('pass');
+		
+	}
+</script>
+		로그인 .. b.html<br>
+	<form method="post" name=loginForm action="js_cal.html" onSubmit='return checkError()'>
+			ID<input type="text" name="id"><br>
+			PW<input type="password" name="pass" id="pass"><br>
+			MOBILE<input type="text" name="mobile"><br>
+			<input type="submit" value="확인하기">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>자바 스크립트 계산기</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+자바스크립트 계산기
+
+<style>
+	.cbtn{width:50px; height:40px;}
+	.cdisplay{width:203px; height:40px; text-align:right; font-size:20pt;}
+	body {line-height:300%;}
+</style>
+<script>
+	function process_btn(val)
+	{
+		//alert(val);
+		var f =	document.cal;	//form
+		//f.display.value = val;
+		//0 이면 누른 숫자로 바꾸고
+		//아니면 누른 숫자를 추가(덧붙이기)
+
+
+		//OP 있으면
+		if(f.op.value != '')
+		{
+			//값을 대체
+
+			if(f.flag.value == '')
+			{
+				f.display.value = val;
+				f.flag.value = '#';
+			}else
+			{
+				f.display.value = f.display.value + val;
+				if(f.op.value == '+'){
+					f.display.value =  f.display.value + val;
+				}
+			}	
+		}else
+		{//OP 없으면
+			if(f.display.value == '0')
+			{
+				f.display.value = val;
+			}else
+			{
+				f.display.value = f.display.value + val;
+			}
+		}
+	}
+
+	function process_op(val)
+	{
+		var f  = document.cal;
+		f.op.value = val;
+		f.prev.value = f.display.value;
+	}
+
+	function process_equal()
+	{
+		var f = document.cal;
+		var a = parseInt(f.prev.value);
+		var b = parseInt(f.display.value);
+		
+		if(f.op.value == '+')
+		{
+			//alert(a + b);
+			f.display.value = a+b;
+		}
+		if(f.op.value == '-')
+		{
+			f.display.value = a-b;
+		}
+		if(f.op.value == '*')
+		{
+			f.display.value = a*b;
+		}
+		if(f.op.value == '/')
+		{
+			f.display.value = a/b;
+		}
+		f.flag.value = '';
+	}
+	function process_clear()
+	{
+		var f = document.cal;
+		f.display.value = '0';
+		f.prev.value = '';
+		f.op.value = '';
+		f.flag.value = '';
+	}
+
+</script>
+<form name=cal method="post" action="">
+	<input type="text" value="0" name="display"><br>
+
+	<input type="button" value="1" class=cbtn onclick="process_btn(1)">
+	<input type="button" value="2" class=cbtn onclick="process_btn(2)">
+	<input type="button" value="3" class=cbtn onclick="process_btn(3)">
+	<input type="button" value="+" class=cbtn onclick="process_op('+')"><br>
+
+	<input type="button" value="4" class=cbtn onclick="process_btn(4)">
+	<input type="button" value="5" class=cbtn onclick="process_btn(5)">
+	<input type="button" value="6" class=cbtn onclick="process_btn(6)">
+	<input type="button" value="-" class=cbtn onclick="process_op('-')"><br>
+
+	<input type="button" value="7" class=cbtn onclick="process_btn(7)">
+	<input type="button" value="8" class=cbtn onclick="process_btn(8)">
+	<input type="button" value="9" class=cbtn onclick="process_btn(9)">
+	<input type="button" value="*" class=cbtn onclick="process_op('*')"><br>
+
+	<input type="button" value="c" class=cbtn onclick="process_clear()">
+	<input type="button" value="ce" class=cbtn onclick="#">
+	<input type="button" value="/" class=cbtn onclick="process_op('/')">
+	<input type="button" value="=" class=cbtn onclick="process_equal()"><br>
+
+	PREV <input type="text" name="prev" class=cprev><br>
+	OP <input type="text" name="op" class=cop><br>
+	FLAG <input type="text" name="flag" class=cflag><br>
+</form>
+
+</body>
+</html>

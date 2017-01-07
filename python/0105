@@ -1,0 +1,24 @@
+__init__
+객체를 만들때 항상 실행됨
+
+클래스명.메서드 형태로 호출할 때는 객체 self 를 입력 인수로 꼭 넣어 주어야 한다.
+객체.메서드 형태로 호출 할 때는 첫번째 입력 인수(self)를 반드시 생략해야 한다.
+
+class 안의 메서드는 무조건(self) 매개변수를 선언해야하는데
+메모리상에서 클래스안의 매서드를 찾기위한 포인터 역할을 함
+
+메모리에선 클래스 만 찾을수있는데 안의 메서드를 구별하기 위한 변수이다(????)
+
+class HousePar():
+	lastname="박"
+	def setname(self, name):
+		self.fullname=self.lastname+name
+	def travel(self, where):
+		print(self.fllname, ", ", where,"여행을 가다.")
+	
+class Housepark(HouseKim)
+//상속받는다 모든 메서드를
+	def travel(self, name, where)
+	//동일한 메서드를 다시 선언하면 오버라이딩 됨(같은 메서드로 다르게 사용할수있음)
+
+
